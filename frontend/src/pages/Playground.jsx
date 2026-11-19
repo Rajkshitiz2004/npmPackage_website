@@ -207,7 +207,7 @@ export default function Playground() {
         <div className="flex items-center space-x-3">
           <div className="flex items-center space-x-2 text-xs font-mono bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Target: Express on localhost:5001</span>
+            <span>Target: Express Backend ({apiClient.defaults.baseURL || 'Vercel /api Service'})</span>
           </div>
         </div>
       </div>

@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001';
+// In production on Vercel or when deployed as services under the same domain,
+// API requests route through the public rewrite (/api/...) on the same origin (empty baseURL).
+// For standalone local development, falls back to VITE_API_BASE_URL or http://localhost:5001.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL !== undefined
+  ? import.meta.env.VITE_API_BASE_URL
+  : (import.meta.env.PROD ? '' : 'http://localhost:5001');
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
