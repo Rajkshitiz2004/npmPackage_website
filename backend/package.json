@@ -1,0 +1,17 @@
+{
+  "name": "api-response-kit-backend",
+  "version": "1.0.0",
+  "description": "Express backend demo for api-response-kit-kshitiz",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "api-response-kit-kshitiz": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
